@@ -11,7 +11,8 @@ Go into your ROS2 workspace's src folder and clone the repository (This code ass
 `git clone https://github.com/Fishir88/Simple-G29-CARLA-Adapter.git`
 
 ```cd ..
-colcon build --symlink-install --packages-select g29_adapter```
+colcon build --symlink-install --packages-select g29_adapter
+```
 
 `source ~/ros2_ws/install/setup.bash`
 

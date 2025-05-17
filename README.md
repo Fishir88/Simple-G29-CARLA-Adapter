@@ -6,17 +6,27 @@ How to use it:
 
 Go into your ROS2 workspace's src folder and clone the repository (This code assumes its 'ros2_ws')
 
-`cd ros2_ws/src/`
+```
+cd ros2_ws/src/
+```
 
-`git clone https://github.com/Fishir88/Simple-G29-CARLA-Adapter.git`
+```
+git clone https://github.com/Fishir88/Simple-G29-CARLA-Adapter.git
+```
 
-```cd ..
+```
+cd ..
 colcon build --symlink-install --packages-select g29_adapter
 ```
 
-`source ~/ros2_ws/install/setup.bash`
+```
+source ~/ros2_ws/install/setup.bash
+```
 
 Run the Joy package's joy_node
 `ros2 run joy joy_node`
 
-`ros2 run g29_adapter adapter`
+
+```
+ros2 run g29_adapter adapter
+```

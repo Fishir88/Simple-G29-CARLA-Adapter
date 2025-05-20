@@ -27,9 +27,9 @@ class JoyProcessor(Node):
 
     def publish_throttle_and_steering(self, joy_msg: Joy):
         # Assuming axes[1] is throttle and axes[0] is steering
-        throttle_value = 1-(max(0.0, min(1.0, joy_msg.axes[2])))  # Clamp to [0.0, 1.0]
-        steering_value = -(max(-1.0, min(1.0, joy_msg.axes[0])))  # Clamp to [-1.0, 1.0]
-        brake_value = 1-(max(0.0, min(1.0, joy_msg.axes[3])))  # Clamp to [0.0, 1.0]
+        throttle_value = (max(0.0, min(1.0, joy_msg.axes[2])))  # Clamp to [0.0, 1.0]
+        steering_value = (max(-1.0, min(1.0, joy_msg.axes[0])))  # Clamp to [-1.0, 1.0]
+        brake_value = (max(0.0, min(1.0, joy_msg.axes[3])))  # Clamp to [0.0, 1.0]
 
         # Publish throttle
         throttle_msg = Float64()
@@ -49,7 +49,7 @@ class JoyProcessor(Node):
         # Publish gear
         if joy_msg.buttons[4] == 1 or joy_msg.buttons[5] == 1:
             gear_msg = String()
-            gear_msg.data = "reverse" if joy_msg.buttons[1] else "forward"
+            gear_msg.data = "reverse" if joy_msg.buttons[5] else "forward"
             self.gear_pub.publish(gear_msg)
         
 

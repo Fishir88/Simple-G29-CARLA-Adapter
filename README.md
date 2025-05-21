@@ -1,6 +1,8 @@
 # Simple-G29-CARLA-Adapter
 Its a simple ROS2 joy node based adapter for CARLA Simulator that translates the Logitech G29 steering wheel's steering, throttle and brake into data that CARLA understands, you will have to switch your G29 to PS3 mode so there is no force feedback, centering or anything motorized. You will also need [Joy](https://github.com/ros-drivers/joystick_drivers/tree/ros2/joy) to run it
 
+Additional useful information: To select gears (forward and backward), you can use the paddles on the back. The right one sets it to "forward" and the left one sets it to "backward".
+
 How to use it:
 
 Go into your ROS2 workspace's src folder and clone the repository (This code assumes its 'ros2_ws')

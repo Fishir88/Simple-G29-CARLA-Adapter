@@ -22,7 +22,7 @@ colcon build --symlink-install --packages-select g29_adapter
 source ~/ros2_ws/install/setup.bash
 ```
 
-Run the Joy package's joy_node
+Run the Joy package's joy_node in a different terminal
 `ros2 run joy joy_node`
 
 

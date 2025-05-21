@@ -31,6 +31,6 @@ ros2 run g29_adapter adapter
 ```
 If everything works well, you should get these messages:
 
-Adapter initialized, waiting for Joy messages...
+"Adapter initialized, waiting for Joy messages..."
 
-Joy message received, adapter started!
+"Joy message received, adapter started!"
